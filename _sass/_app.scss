@@ -1,6 +1,11 @@
 @import "bourbon/bourbon";
 @import "neat/neat";
 
+// Breakpoints
+$desktop: new-breakpoint(min-width 800px 12);
+$tablet: new-breakpoint(max-width 799px);
+$mobile: new-breakpoint(max-width 520px);
+
 body {
   background-color: #fffff0;
 }
@@ -13,6 +18,9 @@ body {
     li {
       list-style: none;
       @include span-columns(3);
+      @include media($mobile) {
+        @include span-columns(12);
+      }
       a {
         color: #747D7D;
         font-family: 'Pathway Gothic One', sans-serif;
@@ -30,38 +38,51 @@ body {
 
 .left-half {
   @include span-columns(7);
+  text-align: center;
+  @include media($tablet) {
+    @include span-columns(12);
+  }
 }
 
 .right-half {
   @include span-columns(5);
+  @include media($tablet) {
+    @include span-columns(12);
+  }
 }
 
 h1 {
   color: #666633;
   font-family: 'Poiret One', cursive;
-  font-size: 50px;
+  font-size: 3.8em;
   letter-spacing: -1px;
   margin: 0;
+  @include media($tablet) {
+    font-size: 3em;
+  }
 }
 
 .are-getting {
-  font-size: 20px;
+  font-size: 1.2em;
 }
 
 span.ampersand {
-  font-size: 70px;
+  font-size: 1.5em;
 }
 
 h2 {
   color: #747D7D;
   font-family: 'Pathway Gothic One', sans-serif;
-  font-size: 50px;
+  font-size: 3.8em;
   margin: 0;
 }
 
 span.married {
-  font-size: 65px;
+  font-size: 1em;
   letter-spacing: 0.8em;
+  @include media($tablet) {
+    letter-spacing: 0.2em;
+  }
 }
 
 .wrapper {
