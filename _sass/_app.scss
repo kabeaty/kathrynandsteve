@@ -1,0 +1,74 @@
+@import "bourbon/bourbon";
+@import "neat/neat";
+
+body {
+  background-color: #fffff0;
+}
+
+.site-nav {
+  @include outer-container;
+  border-bottom: 3px solid #ffcba4;
+  margin-bottom: 1em;
+  ul {
+    li {
+      list-style: none;
+      @include span-columns(3);
+      a {
+        color: #747D7D;
+        font-family: 'Pathway Gothic One', sans-serif;
+        font-size: 24px;
+        letter-spacing: 3px;
+        text-decoration: none;
+        text-transform: uppercase;
+        &:hover {
+          color: #ffcba4;
+        }
+      }
+    }
+  }
+}
+
+.left-half {
+  @include span-columns(7);
+}
+
+.right-half {
+  @include span-columns(5);
+}
+
+h1 {
+  color: #666633;
+  font-family: 'Poiret One', cursive;
+  font-size: 50px;
+  letter-spacing: -1px;
+  margin: 0;
+}
+
+.are-getting {
+  font-size: 20px;
+}
+
+span.ampersand {
+  font-size: 70px;
+}
+
+h2 {
+  color: #747D7D;
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 50px;
+  margin: 0;
+}
+
+span.married {
+  font-size: 65px;
+  letter-spacing: 0.8em;
+}
+
+.wrapper {
+  @include outer-container;
+  padding: 0 2em;
+}
+
+img.fullwidth {
+  width: 100%;
+}
