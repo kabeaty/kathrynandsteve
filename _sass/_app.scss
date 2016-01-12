@@ -6,34 +6,43 @@ $desktop: new-breakpoint(min-width 800px 12);
 $tablet: new-breakpoint(max-width 799px);
 $mobile: new-breakpoint(max-width 520px);
 
+$peach: #ffcba4;
+$sagegreen: #989f7a;
+
 body {
-  background-color: #fffff0;
+  background-color: #333;
 }
 
 .site-nav {
   @include outer-container;
-  border-bottom: 3px solid #ffcba4;
-  margin-bottom: 1em;
   ul {
     li {
       list-style: none;
       @include span-columns(3);
-      @include media($mobile) {
+      @include media($tablet) {
         @include span-columns(12);
       }
       a {
-        color: #747D7D;
-        font-family: 'Pathway Gothic One', sans-serif;
+        color: $sagegreen;
+        font-family: 'Lobster Two', sans-serif;
         font-size: 24px;
         letter-spacing: 3px;
         text-decoration: none;
-        text-transform: uppercase;
         &:hover {
           color: #ffcba4;
         }
       }
     }
   }
+}
+
+.menuscroll {
+  width: 100%;
+}
+
+.twelve {
+  @include span-columns(12);
+  text-align: center;
 }
 
 .seven {
@@ -71,12 +80,14 @@ h1 {
   }
 }
 
-.are-getting {
-  font-size: 1.2em;
-}
-
-span.ampersand {
-  font-size: 1.5em;
+.home-married {
+  img {
+    background-color: #333;
+    width: 75%;
+    @include media($tablet) {
+      width: 100%;
+    }
+  }
 }
 
 h2 {
@@ -86,17 +97,8 @@ h2 {
   margin: 0;
 }
 
-span.married {
-  font-size: 1em;
-  letter-spacing: 0.8em;
-  @include media($tablet) {
-    letter-spacing: 0.2em;
-  }
-}
-
 .wrapper {
   @include outer-container;
-  padding: 0 2em;
 }
 
 img.fullwidth {
