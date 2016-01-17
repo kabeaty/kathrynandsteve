@@ -9,6 +9,7 @@ $mobile: new-breakpoint(max-width 520px);
 $peach: #ffcba4;
 $sagegreen: #989f7a;
 
+// General and layout styles
 body {
   background-color: #333;
 }
@@ -34,6 +35,18 @@ body {
       }
     }
   }
+}
+
+.wrapper {
+  @include outer-container;
+}
+
+img.fullwidth {
+  width: 100%;
+}
+
+.padding-vertical {
+  padding: 2em 0;
 }
 
 .menuscroll {
@@ -85,17 +98,8 @@ body {
   }
 }
 
-h1 {
-  color: #666633;
-  font-family: 'Poiret One', cursive;
-  font-size: 3.8em;
-  letter-spacing: -1px;
-  margin: 0;
-  @include media($tablet) {
-    font-size: 3em;
-  }
-}
 
+// Images
 .home-married {
   img {
     background-color: #333;
@@ -113,41 +117,46 @@ h1 {
   }
 }
 
+// Typography
 h2 {
   color: white;
   font-family: 'Lobster Two';
   font-size: 3em;
   font-weight: 700;
+  margin: 0;
+  padding: 0.5em 0;
 }
 
 h3 {
   color: white;
   font-family: 'Lobster Two';
   font-size: 2.5em;
+  margin: 0;
 }
 
 h4 {
   color: white;
   font-family: 'Playfair Display';
-  font-size: 2em;
-}
-
-.wrapper {
-  @include outer-container;
-}
-
-img.fullwidth {
-  width: 100%;
+  font-size: 1.8em;
+  margin: 0;
 }
 
 p {
   color: white;
   font-family: 'Playfair Display', sans-serif;
-  font-size: 1.5em;
+  font-size: 1.2em;
   margin: 0;
+  padding: 0.8em 0;
   text-align: left;
 }
 
-.padding-vertical {
-  padding: 2em 0;
+a {
+  color: $sagegreen;
+}
+
+// Page-specific
+.our-story {
+  .wrapper {
+    padding: 0 1em;
+  }
 }
