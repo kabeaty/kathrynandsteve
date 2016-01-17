@@ -45,8 +45,24 @@ body {
   text-align: center;
 }
 
+.nine {
+  @include span-columns(9);
+  text-align: center;
+  @include media($tablet) {
+    @include span-columns(12);
+  }
+}
+
 .seven {
   @include span-columns(7);
+  text-align: center;
+  @include media($tablet) {
+    @include span-columns(12);
+  }
+}
+
+.six {
+  @include span-columns(6);
   text-align: center;
   @include media($tablet) {
     @include span-columns(12);
@@ -61,8 +77,8 @@ body {
   }
 }
 
-.six {
-  @include span-columns(6);
+.three {
+  @include span-columns(3);
   text-align: center;
   @include media($tablet) {
     @include span-columns(12);
@@ -90,11 +106,30 @@ h1 {
   }
 }
 
+.skyline {
+  width: 80%;
+  @include media($tablet) {
+    width: 100%;
+  }
+}
+
 h2 {
   color: white;
   font-family: 'Lobster Two';
-  font-size: 2em;
+  font-size: 3em;
   font-weight: 700;
+}
+
+h3 {
+  color: white;
+  font-family: 'Lobster Two';
+  font-size: 2.5em;
+}
+
+h4 {
+  color: white;
+  font-family: 'Playfair Display';
+  font-size: 2em;
 }
 
 .wrapper {
