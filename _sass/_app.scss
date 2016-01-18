@@ -14,8 +14,21 @@ body {
   background-color: #333;
 }
 
+.site-header {
+  background-color: #333;
+  height: 90px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  @include media($tablet) {
+    height: 160px;
+  }
+}
+
 .site-nav {
   @include outer-container;
+  padding: 0.5em 0;
   ul {
     li {
       list-style: none;
@@ -98,6 +111,14 @@ img.fullwidth {
   }
 }
 
+.main {
+  position: relative;
+  top: 80px;
+  @include media($tablet) {
+    top: 160px;
+  }
+}
+
 
 // Images
 .home-married {
@@ -115,6 +136,13 @@ img.fullwidth {
   @include media($tablet) {
     width: 100%;
   }
+}
+
+.border-light {
+    border: 8px solid white;
+  }
+.border-dark {
+  border: 8px solid darken($sagegreen, 20%);
 }
 
 // Typography
@@ -136,7 +164,7 @@ h3 {
 
 h4 {
   color: white;
-  font-family: 'Playfair Display';
+  font-family: 'Lobster Two';
   font-size: 1.8em;
   margin: 0;
 }
@@ -151,12 +179,20 @@ p {
 }
 
 a {
-  color: $sagegreen;
+  color: $peach;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
 }
 
 // Page-specific
-.our-story {
+.our-story, .wedding-info {
   .wrapper {
-    padding: 0 1em;
+    padding: 2em 3em;
+    @include media($tablet) {
+      padding: 1em;
+    }
   }
 }
