@@ -79,6 +79,14 @@ img.fullwidth {
   }
 }
 
+.eight {
+  @include span-columns(8);
+  text-align: center;
+  @include media($tablet) {
+    @include span-columns(12);
+  }
+}
+
 .seven {
   @include span-columns(7);
   text-align: center;
@@ -97,6 +105,14 @@ img.fullwidth {
 
 .five {
   @include span-columns(5);
+  text-align: center;
+  @include media($tablet) {
+    @include span-columns(12);
+  }
+}
+
+.four {
+  @include span-columns(4);
   text-align: center;
   @include media($tablet) {
     @include span-columns(12);
@@ -152,7 +168,7 @@ h2 {
   font-size: 3em;
   font-weight: 700;
   margin: 0;
-  padding: 0.5em 0;
+  padding: 0.5em 0 0 0;
 }
 
 h3 {
@@ -190,7 +206,7 @@ ul {
 // Page-specific
 .our-story, .wedding-info {
   .wrapper {
-    padding: 2em 3em;
+    padding: 1em 3em;
     @include media($tablet) {
       padding: 1em;
     }
