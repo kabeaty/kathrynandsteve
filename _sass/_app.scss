@@ -138,11 +138,19 @@ img.fullwidth {
   }
 }
 
+.image-text {
+  padding-top: 2em;
+  @include media($tablet) {
+    padding-top: 0.5em;
+  }
+}
+
 
 // Images
 .home-married {
   img {
     background-color: #333;
+    margin: 1em 0;
     width: 75%;
     @include media($tablet) {
       width: 100%;
